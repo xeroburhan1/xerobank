@@ -3,67 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login-XEROBANK</title>
+    <title>Home-XEROBANK</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-50">
-    <section class="bg-gray-50">
-      <div
-        class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
-      >
-        <h1 class="text-4xl text-center font-bold mb-10">
-          Welcome to <span class="text-blue-600">XEROBANK</span>
-        </h1>
-        <div
-          class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0"
+  <body
+    class="bg-gray-50 flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+  >
+    <h1 class="text-4xl text-center font-bold mb-10">
+      Manage your <span class="text-blue-600">Money</span>
+    </h1>
+
+    <div class="flex gap-5">
+      <div>
+        <a
+          href="#"
+          class="block w-60 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         >
-          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1
-              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl"
-            >
-              Sign in to your account
-            </h1>
-            <div class="space-y-4 md:space-y-6" >
-              <div>
-                <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Your email / Username</label
-                >
-                <input
-                  name="email"
-                  id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
-                  placeholder="name@company.com"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
-                  required=""
-                />
-              </div>
-              <button
-                id="submit"
-                class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-emerald-500" id="balance">
+            0.00 Tk
+          </h5>
+          <p class="font-normal text-gray-700">Balance</p>
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="block w-60 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-500" id="deposite">
+            0.00 Tk
+          </h5>
+          <p class="font-normal text-gray-700">Deposite</p>
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="block w-60 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-red-500" id="withdraw">
+            0.00 Tk
+          </h5>
+          <p class="font-normal text-gray-700">Withdraw</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex gap-5 mt-10">
+      <div class="w-80">
+        <div
+          class="p-6 space-y-4 md:space-y-6 sm:p-8 bg-white rounded-lg shadow"
+        >
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl"
+          >
+            Deposit from here
+          </h1>
+          <div class="space-y-4 md:space-y-6">
+            <div>
+              <label
+                for="depInput"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Enter amount</label
               >
-                Sign in
-              </button>
+              <input
+                name="dipInput"
+                type="number"
+                id="dipInput"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
+                placeholder="100000"
+                required=""
+              />
             </div>
+            <button
+              id="dipBtn"
+              class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Deposit
+            </button>
           </div>
         </div>
       </div>
-    </section>
+      <div class="w-80">
+        <div
+          class="p-6 space-y-4 md:space-y-6 sm:p-8 bg-white rounded-lg shadow"
+        >
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl"
+          >
+            Withdraw from here
+          </h1>
+          <div class="space-y-4 md:space-y-6">
+            <div>
+              <label
+                for="witInput"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Enter amount</label
+              >
+              <input
+                name="witInput"
+                type="number"
+                id="witInput"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5"
+                placeholder="100000"
+                required=""
+              />
+            </div>
+            <button
+              id="witBtn"
+              class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-  <script src="/index.js"></script>
+  <script src="/home.js"></script>
 </html>
